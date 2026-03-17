@@ -1,0 +1,16 @@
+[package]
+name = "lions-tooth"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = { version = "0.15", features = ["dynamic_linking"] }
+rand = "0.8"
+noise = "0.9"
+
+# Optimization for dev builds (fast recompilation)
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
